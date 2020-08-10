@@ -12,6 +12,15 @@ public class City : MonoBehaviour
 
     public int[] buildingCounts = new int[4];
 
+    private const int START_CASH = 10_000_000;
+    private const int START_FOOD = 0;
+    private const int START_JOB_CEILING = 0;
+
+    public const int PAYROLL = 1000;
+    private const float FARM_FOOD = 5f;
+    private const int HOUSE_MAX_POPULATION = 5;
+    private const float FOOD_CONSUMPTION = 1.0f;
+
     private UIController uiController;
 
     void Start()
@@ -23,9 +32,9 @@ public class City : MonoBehaviour
             buildingCounts[i] = 0;
         }
 
-        Cash = 50;
-        Food = 0;
-        JobsCeiling = 0;
+        Cash = START_CASH;
+        Food = START_FOOD;
+        JobsCeiling = START_JOB_CEILING;
     }
 
     public void EndTurn()
@@ -52,7 +61,7 @@ public class City : MonoBehaviour
 
     void CalculateCash()
     {
-        Cash += JobsCurrent * 2;
+        Cash += JobsCurrent * PAYROLL;
     }
 
     public void DepositCash(int cash)
@@ -63,20 +72,21 @@ public class City : MonoBehaviour
 
     void CalculateFood()
     {
-        Food += buildingCounts[2] * 4f;
+        Food += buildingCounts[2] * FARM_FOOD;
     }
 
     void CalculatePopulation()
     {
-        PopulationCeiling = buildingCounts[1] * 5;
+        PopulationCeiling = buildingCounts[1] * HOUSE_MAX_POPULATION;
+
         if (Food >= PopulationCurrent && PopulationCurrent < PopulationCeiling)
         {
-            Food -= PopulationCurrent * 0.25f;
-            PopulationCurrent = Mathf.Min(PopulationCurrent += Food * 0.25f, PopulationCeiling);
+            Food -= PopulationCurrent * FOOD_CONSUMPTION;
+            PopulationCurrent = Mathf.Min(PopulationCurrent += Food * FOOD_CONSUMPTION, PopulationCeiling);
         }
         else if (Food < PopulationCurrent)
         {
-            PopulationCurrent -= (PopulationCurrent - Food) * 0.25f;
+            PopulationCurrent -= (PopulationCurrent - Food) * FOOD_CONSUMPTION;
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class BuildingHandler : MonoBehaviour
@@ -46,7 +47,7 @@ public class BuildingHandler : MonoBehaviour
                 {
                         if (city.Cash >= selectedBuilding.cost)
                         {
-                            city.DepositCash(selectedBuilding.cost);
+                            city.DepositCash(-selectedBuilding.cost);
                             city.buildingCounts[selectedBuilding.id]++;
                             board.AddBuilding(selectedBuilding, gridPosition);
                     }

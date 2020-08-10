@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,14 +19,11 @@ public class UIController : MonoBehaviour
 
     public void UpdateCityData()
     {
-        cityText.text = string.Format("Jobs: {0}/{1}\n, Cash: {2} + (+${6})\n, Population: {3}/{4}\n, Food: {5}",
-        city.JobsCurrent,
-        city.JobsCeiling,
-        city.Cash,
-        (int)city.PopulationCurrent,
-        (int)city.PopulationCeiling,
-        (int)city.Food,
-        city.JobsCurrent);
+        int integerPopulationCurrent = (int)city.PopulationCurrent;
+        int integerPopulationCeiling = (int)city.PopulationCeiling;
+        int integerFood = (int)city.Food;
+
+        cityText.text = $"Jobs: {city.JobsCurrent}/{city.JobsCeiling}\nCash: {city.Cash}\nPopulation: {integerPopulationCurrent}/{integerPopulationCeiling}\nFood: {integerFood}";
     }
 
     public void UpdateDayCount()

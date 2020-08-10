@@ -1472,7 +1472,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Road ($5)\x13"
+  m_Text: "Road (5000)\x13"
 --- !u!222 &1634297342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Factory ($20)\x13"
+  m_Text: "Factory (3000000)\x13"
 --- !u!222 &1868931880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1628,7 +1628,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "House ($10)\x13"
+  m_Text: "House (80000)\x13"
 --- !u!222 &1899188600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1706,7 +1706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Farm ($15)\x13"
+  m_Text: "Farm (1200000)\x13"
 --- !u!222 &1905194077
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  cost: 10
+  cost: 80000
   buildingName: "House\x13"
 --- !u!1001 &5394740879815879417
 PrefabInstance:

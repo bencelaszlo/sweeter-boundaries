@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
-  cost: 20
+  cost: 3000000
   buildingName: Factory
 --- !u!1001 &1174611753430117499
 PrefabInstance:
